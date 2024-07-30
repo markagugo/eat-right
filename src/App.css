@@ -1,38 +1,82 @@
-.App {
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* General Styles */
+.nutritional-info {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.nutritional-info h1 {
+  font-size: 2em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.nutritional-info h2 {
+  font-size: 1.5em;
+  color: #3498db;
+  margin: 20px 0 10px;
+}
+
+.nutritional-info h3 {
+  font-size: 1.2em;
+  color: #e74c3c;
+  margin: 15px 0 5px;
+}
+
+.nutritional-info ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.nutritional-info li {
+  margin-bottom: 10px;
+}
+
+.nutritional-info a {
+  color: #1abc9c;
+  text-decoration: none;
+}
+
+.nutritional-info a:hover {
+  text-decoration: underline;
+}
+
+.nutritional-info p {
+  margin-bottom: 20px;
+}
+
+/* Media Styles */
+.nutritional-info img,
+.nutritional-info video,
+.nutritional-info .gif {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.nutritional-info .media-container {
   text-align: center;
+  margin: 20px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nutritional-info .media-container img,
+.nutritional-info .media-container video,
+.nutritional-info .media-container .gif {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* For GIFs specifically */
+.nutritional-info .gif {
+  max-height: 500px; /* Adjust based on desired maximum height */
 }
