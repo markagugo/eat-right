@@ -8,16 +8,16 @@ const MarkdownRenderer = () => {
     const { category } = useParams();
     const { fetchFoodArticles } = useData();
     const [markdownContent, setMarkdownContent] = useState('');
-    const foods = ['Protein', 'Carbohydrate', 'Fats-And-Oil', 'MicroNutrient', 'Water'];
 
     useEffect(() => {
+        const foods = ['Protein', 'Carbohydrate', 'Fats-And-Oil', 'MicroNutrient', 'Water'];
         const fetchMarkdown = async () => {
             if (category) {
                 try {
                     if (foods.includes(category)){
                         const markdown = await fetchFoodArticles(`Foods/${category}`);
                         setMarkdownContent(markdown);
-                    }else{
+                    } else {
                         const markdown = await fetchFoodArticles(`Blog/${category}`);
                         setMarkdownContent(markdown);
                     }
@@ -28,9 +28,9 @@ const MarkdownRenderer = () => {
                 }
             }
         };
-
+    
         fetchMarkdown();
-    }, [foods, category, fetchFoodArticles]);
+    }, [category, fetchFoodArticles]);
 
     return (
         <div>
