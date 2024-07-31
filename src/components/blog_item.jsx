@@ -14,11 +14,11 @@ function BlogItem({ id, title, altText, imageUrl, description, isLast }) {
   const navigate = useNavigate();
 
   const handleLearnMoreClick = () => {
-    navigate(`/article/${title}`);
+    navigate(`/${id}`);
   };
 
   const handleShareClick = () => {
-    const shareLink = `${window.location.origin}/article/${title}`;
+    const shareLink = `${window.location.origin}/${id}`;
     navigator.clipboard.writeText(shareLink).then(() => {
       setOpenSnackbar(true); // Show Snackbar when link is copied
     }, (err) => {

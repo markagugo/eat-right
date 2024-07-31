@@ -33,7 +33,6 @@ function Blog() {
             {blogs.length > 0 ? (
                 blogs.map((blog) => (
                     <BlogItem
-                        key={blog.id} // Ensure you include a unique key prop
                         id={blog.id}
                         title={blog.title} 
                         altText={blog.altText}
