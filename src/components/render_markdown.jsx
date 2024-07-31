@@ -30,7 +30,7 @@ const MarkdownRenderer = () => {
         };
 
         fetchMarkdown();
-    }, [category, fetchFoodArticles]);
+    }, [foods, category, fetchFoodArticles]);
 
     return (
         <div>
